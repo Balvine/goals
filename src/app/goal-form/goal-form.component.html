@@ -3,7 +3,7 @@
     <hr>
 
     <form  (ngSubmit)='submitGoal()' #goalForm='ngForm'>
-        <div class="form-group">
+        <div class="form-group test" > 
   
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newGoal.name" name="name" #name='ngModel' required>
@@ -27,6 +27,6 @@
               <p>Date is required</p>
             </div>
         </div>
-        <button type="submit" class="btn btn-success">Add Goal</button>
+        <button type="submit" class="btn btn-success"(click)="dontAdd(newGoal.name,newGoal.description,$event)">Add Goal</button>
     </form>
   </div>

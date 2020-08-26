@@ -16,6 +16,13 @@ export class GoalFormComponent implements OnInit {
   submitGoal(){
 this.addGoal.emit(this.newGoal);
   }
+  dontAdd( name:any,description:any,event:any){
+    if(!name || !description){
+     event.preventDefault()
+    }
+  }
+   
+  
   constructor() { }
 
   ngOnInit(): void {
